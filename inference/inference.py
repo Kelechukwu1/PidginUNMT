@@ -70,10 +70,7 @@ class Inference(EvaluatorMT):
                 with open(lang2_path, 'w', encoding='utf-8') as f:
                     f.write('\n'.join(lang2_txt) + '\n')
 
-                # restore original segmentation
-                restore_segmentation(lang1_path)
-                restore_segmentation(lang2_path)
-
+                
                 # store data paths
                 params.ref_paths[(lang2, lang1, data_type)] = lang1_path
                 params.ref_paths[(lang1, lang2, data_type)] = lang2_path
