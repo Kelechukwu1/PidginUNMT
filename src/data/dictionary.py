@@ -145,8 +145,8 @@ class Dictionary(object):
         unk_words = {}
 
         # index sentences
-        sentences = list(open(path, 'r', encoding='utf-8'))
-        for sent in sentences:
+        sentence_file = list(open(path, 'r', encoding='utf-8'))
+        for sent in sentence_file:
             sent = sent.lower()
             if len(sent) == 0:
                 print("Empty sentence found")
